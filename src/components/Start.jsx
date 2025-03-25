@@ -1,9 +1,10 @@
 import { SafeAreaView, Image, Text,  View, Pressable } from 'react-native';
 import React from 'react';
 import tw from '../../tailwind';
+import Home from '../components/Home';
+import InputForm from './InputForm';
 
-
-const Start = () => {
+const Start = ({ navigation }) => {
   return (
     <SafeAreaView style={tw`flex-1`}>
       <Image 
@@ -21,7 +22,7 @@ const Start = () => {
           {/* Button */}
           <Pressable
             style={tw`bg-red-500 rounded-full py-4 w-full shadow-lg border border-white`}
-            onPress={() => console.log('Button pressed!')} // Add your action here
+            onPress={() => navigation.navigate('InputForm')}
           >
             <Text style={tw`text-white text-center text-lg font-semibold`}>
               Start Now
