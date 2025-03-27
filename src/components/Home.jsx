@@ -1,20 +1,41 @@
-import { Text, View, Pressable } from 'react-native';
+import { SafeAreaView, Text, View, Image } from 'react-native';
 import React from 'react';
 import tw from '../../tailwind';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+import ImageSlider from './ImageSlider';
+import Exercise from './Exercise';
 
-const Home = ({ navigation,route }) => {
-  const userData=route.params;
-  console.log(userData);
+const Home = ({ navigation, route }) => {
+  const { userData } = route.params || {};
+
   return (
-    <SafeAreaView style={tw`flex-1 bg-gray-100 justify-center items-center`}>
-      <Text style={tw`text-2xl font-bold text-black mb-4`}>Welcome to Your Workouts!</Text>
-      <Pressable
-        style={tw`bg-blue-500 rounded-full py-3 px-6`}
-        onPress={() => navigation.navigate('Start')}
-      >
-        <Text style={tw`text-white text-center text-lg font-semibold`}>Back to Start</Text>
-      </Pressable>
+    <SafeAreaView style={tw`flex-1 bg-white mt-10`}>
+      <StatusBar style="dark" />
+      <View style={tw`flex-1 px-5 pt-2`}>
+        {/* Header Section */}
+        <View style={tw`flex-row items-center justify-between mt-2`}>
+          {/* Workout Title */}
+          <View>
+            <Text style={tw`text-4xl text-gray-800 font-bold tracking-wider`}>
+              READY TO
+            </Text>
+            <Text style={tw`text-4xl text-pink-600 font-bold tracking-wider`}>
+              WORKOUT
+            </Text>
+          </View>
+
+          {/* User Avatar */}
+          <View style={tw`w-14 h-14 rounded-full border`}>
+            <Image
+              source={require('../../assets/male.png')}
+              style={tw`w-full h-full rounded-full`}
+              resizeMode="cover"
+            />
+          </View>
+        </View>
+        <View><ImageSlider/></View>
+        <View><Exercise/></View>
+      </View>
     </SafeAreaView>
   );
 };
