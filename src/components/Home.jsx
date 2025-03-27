@@ -4,6 +4,7 @@ import tw from '../../tailwind';
 import { StatusBar } from 'expo-status-bar';
 import ImageSlider from './ImageSlider';
 import Exercise from './Exercise';
+import WeeklyExercise from './WeeklyExercise';
 
 const Home = ({ navigation, route }) => {
   const { userData } = route.params || {};
@@ -25,7 +26,7 @@ const Home = ({ navigation, route }) => {
           </View>
 
           {/* User Avatar */}
-          <View style={tw`w-14 h-14 rounded-full border`}>
+          <View style={tw`w-12 h-12  rounded-full border`}>
             <Image
               source={require('../../assets/male.png')}
               style={tw`w-full h-full rounded-full`}
@@ -34,7 +35,8 @@ const Home = ({ navigation, route }) => {
           </View>
         </View>
         <View><ImageSlider/></View>
-        <View><Exercise/></View>
+        <View><Exercise navigation={navigation}/></View>
+        <View><WeeklyExercise/></View>
       </View>
     </SafeAreaView>
   );
