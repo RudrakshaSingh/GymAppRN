@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View, Image } from 'react-native';
+import { SafeAreaView, Text, View, Image,ScrollView } from 'react-native';
 import React from 'react';
 import tw from '../../tailwind';
 import { StatusBar } from 'expo-status-bar';
@@ -12,6 +12,7 @@ const Home = ({ navigation, route }) => {
   return (
     <SafeAreaView style={tw`flex-1 bg-white mt-10`}>
       <StatusBar style="dark" />
+      <ScrollView>
       <View style={tw`flex-1 px-5 pt-2`}>
         {/* Header Section */}
         <View style={tw`flex-row items-center justify-between mt-2`}>
@@ -37,7 +38,7 @@ const Home = ({ navigation, route }) => {
         <View><ImageSlider/></View>
         <View><ExerciseAllBodyParts navigation={navigation}/></View>
         <View><WeeklyExercise/></View>
-      </View>
+      </View></ScrollView>
     </SafeAreaView>
   );
 };
