@@ -5,7 +5,7 @@ import bodyParts from "./bodyParts";
 
 const { width } = Dimensions.get("window");
 
-const Exercise = ({navigation}) => {
+const ExerciseAllBodyParts = ({navigation}) => {
 	const [selectedCategory, setSelectedCategory] = useState(null);
 
 	return (
@@ -59,4 +59,4 @@ const Exercise = ({navigation}) => {
 	);
 };
 
-export default Exercise;
+export default ExerciseAllBodyParts;

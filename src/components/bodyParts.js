@@ -7,17 +7,17 @@ const bodyParts = [
     {
       id: 1,
       title: "Cardio",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdhExvsOI7_pNSsArNyeGLvPUR6Qc-PQ6Wg&s"
+      image: "https://plus.unsplash.com/premium_photo-1664304732747-661c2cd16774?q=80&w=3178&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 2,
       title: "Chest",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Dl5VwnnGnFJi_dtqGs4ssPT4Bxznc_J4TQ&s"
+      image: "https://media.istockphoto.com/id/180622473/photo/young-man-working-out-in-the-gym.webp?a=1&b=1&s=612x612&w=0&k=20&c=kgXubq2BbVMesigRF2Wtvw7i5zyjAEvFxzeoKw52J20="
     },
     {
       id: 3,
       title: "Lower Arms",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJWGQg6NO8D_Pt_gkHqoUtfmhN-oKM-7rwcQ&s"
+      image: "https://media.istockphoto.com/id/1369575706/photo/shot-of-a-muscular-young-man-exercising-with-a-dumbbell-in-a-gym.jpg?s=612x612&w=0&k=20&c=wrYAWjmcdon4j8m6hEC-EqavvVl0ZoUeC71K6HhN-7c="
     },
     {
       id: 4,

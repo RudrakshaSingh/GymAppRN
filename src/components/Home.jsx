@@ -3,8 +3,8 @@ import React from 'react';
 import tw from '../../tailwind';
 import { StatusBar } from 'expo-status-bar';
 import ImageSlider from './ImageSlider';
-import Exercise from './Exercise';
 import WeeklyExercise from './WeeklyExercise';
+import ExerciseAllBodyParts from './ExerciseAllBodyParts';
 
 const Home = ({ navigation, route }) => {
   const { userData } = route.params || {};
@@ -35,7 +35,7 @@ const Home = ({ navigation, route }) => {
           </View>
         </View>
         <View><ImageSlider/></View>
-        <View><Exercise navigation={navigation}/></View>
+        <View><ExerciseAllBodyParts navigation={navigation}/></View>
         <View><WeeklyExercise/></View>
       </View>
     </SafeAreaView>
