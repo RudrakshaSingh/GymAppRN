@@ -37,7 +37,7 @@ const Home = ({ navigation, route }) => {
         </View>
         <View><ImageSlider/></View>
         <View><ExerciseAllBodyParts navigation={navigation}/></View>
-        <View><WeeklyExercise/></View>
+        <View><WeeklyExercise navigation={navigation}/></View>
       </View></ScrollView>
     </SafeAreaView>
   );

@@ -7,6 +7,7 @@ import Home from "./src/components/Home";
 import InputForm from "./src/components/InputForm";
 import SpecificExercise from "./src/components/SpecificExercise";
 import ExerciseDetails from "./src/components/ExerciseDetails";
+import WeekExerciseDetails from "./src/components/WeekExerciseDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,12 @@ const App = () => {
 				<Stack.Screen
 					name="ExerciseDetails"
 					component={ExerciseDetails}
+					options={{
+						headerShown: false,
+					}}></Stack.Screen>
+				<Stack.Screen
+					name="WeekExerciseDetails"
+					component={WeekExerciseDetails}
 					options={{
 						headerShown: false,
 					}}></Stack.Screen>

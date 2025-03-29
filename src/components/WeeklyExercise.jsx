@@ -21,10 +21,11 @@ const WeeklyExercise = ({ navigation }) => {  // Added navigation prop
             key={part.week}
             onPress={() => {
               setSelectedCategory(part.week);
-            //   navigation.navigate('SpecificExercise', { 
-            //     title: part.week,  // Using week as title since title isn't in data
-            //     image: Image.resolveAssetSource(part.image).uri  // Convert require to uri
-            //   });
+              console.warn("Selected week:", part);  // For debuggin
+              navigation.navigate('SpecificExercise', { 
+                title: part.week,
+                image: Image.resolveAssetSource(part.image).uri  // Convert require to uri
+              });
             }}
             style={[
               tw`mr-4 rounded-xl overflow-hidden shadow-md`,
@@ -39,7 +40,7 @@ const WeeklyExercise = ({ navigation }) => {  // Added navigation prop
               <Image
                 source={part.image}  // Using require directly since it's local
                 style={[
-                  tw`w-45 h-45 rounded-xl `,
+                  tw`w-40 h-40 rounded-xl`,
                   {
                     opacity: selectedCategory === part.week ? 0.8 : 1,
                     transform: [{ scale: selectedCategory === part.week ? 0.95 : 1 }],
@@ -49,7 +50,7 @@ const WeeklyExercise = ({ navigation }) => {  // Added navigation prop
               />
               <Text
                 style={[
-                  tw` mb-3 text-base font-semibold `,
+                  tw`mt-3 mb-3 text-base font-semibold`,
                   {
                     color: selectedCategory === part.week ? "rgb(219 39 119)" : "rgba(55, 65, 81, 1)",
                   },

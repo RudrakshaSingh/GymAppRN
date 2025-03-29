@@ -22,7 +22,7 @@ const bodyParts = [
     {
       id: 4,
       title: "Lower Legs",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7dlZCXzyTLD1A56ode1D0ZC__rurApksTXg&s"
+      image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 5,
