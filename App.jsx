@@ -8,6 +8,8 @@ import InputForm from "./src/components/InputForm";
 import SpecificExercise from "./src/components/SpecificExercise";
 import ExerciseDetails from "./src/components/ExerciseDetails";
 import WeekExerciseDetails from "./src/components/WeekExerciseDetails";
+import UserProfile from "./src/components/UserProfile";
+import SingleExerciseDetails from "./src/components/SingleExerciseDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +45,18 @@ const App = () => {
 				<Stack.Screen
 					name="WeekExerciseDetails"
 					component={WeekExerciseDetails}
+					options={{
+						headerShown: false,
+					}}></Stack.Screen>
+				<Stack.Screen
+					name="UserProfile"
+					component={UserProfile}
+					options={{
+						headerShown: false,
+					}}></Stack.Screen>
+					<Stack.Screen
+					name="SingleExerciseDetails"
+					component={SingleExerciseDetails}
 					options={{
 						headerShown: false,
 					}}></Stack.Screen>

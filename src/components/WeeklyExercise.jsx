@@ -22,7 +22,7 @@ const WeeklyExercise = ({ navigation }) => {  // Added navigation prop
             onPress={() => {
               setSelectedCategory(part.week);
               console.warn("Selected week:", part);  // For debuggin
-              navigation.navigate('SpecificExercise', { 
+              navigation.navigate('WeekExerciseDetails', { 
                 title: part.week,
                 image: Image.resolveAssetSource(part.image).uri  // Convert require to uri
               });
