@@ -1,4 +1,4 @@
-import { Text, View, Image, ScrollView, ActivityIndicator, TouchableOpacity, TextInput } from "react-native";
+import { Text, View, Image, ScrollView, ActivityIndicator, TouchableOpacity, TextInput,StatusBar } from "react-native";
 import { useState, useEffect } from "react";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -91,6 +91,7 @@ const SpecificExercise = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white`}>
+      <StatusBar hidden={true} />
       <ScrollView contentContainerStyle={tw`p-4`} showsVerticalScrollIndicator={false} bounces={true}>
         {/* Header with back button */}
         <View style={tw`flex-row items-center mb-2`}>

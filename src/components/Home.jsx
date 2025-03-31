@@ -1,7 +1,6 @@
-import { SafeAreaView, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { SafeAreaView, Text, View, Image, ScrollView, TouchableOpacity,StatusBar } from 'react-native';
 import React from 'react';
 import tw from '../../tailwind';
-import { StatusBar } from 'expo-status-bar';
 import ImageSlider from './ImageSlider';
 import WeeklyExercise from './WeeklyExercise';
 import ExerciseAllBodyParts from './ExerciseAllBodyParts';
@@ -11,7 +10,8 @@ const Home = ({ navigation, route }) => {
   const { userData } = route.params || {};
 
   return (
-    <SafeAreaView style={tw`flex-1 bg-gray-50 mt-10`}>
+    <SafeAreaView style={tw`flex-1 bg-gray-50 `}>
+      <StatusBar hidden={true} />
       <StatusBar style="dark" />
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Header Section with Shadow */}

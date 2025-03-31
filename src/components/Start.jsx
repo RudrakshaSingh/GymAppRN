@@ -1,4 +1,4 @@
-import { SafeAreaView, Image, Text,  View, Pressable } from 'react-native';
+import { SafeAreaView, Image, Text,  View, Pressable,StatusBar  } from 'react-native';
 import React from 'react';
 import tw from '../../tailwind';
 import Home from '../components/Home';
@@ -7,6 +7,7 @@ import InputForm from './InputForm';
 const Start = ({ navigation }) => {
   return (
     <SafeAreaView style={tw`flex-1`}>
+      <StatusBar hidden={true} />
       <Image 
         source={{ uri: 'https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=3098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }}
         style={[tw`w-full h-full`, { resizeMode: 'cover' }]} // Full-screen image
